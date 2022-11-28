@@ -1,7 +1,7 @@
 <template>
     <div class="center">
         <div class="ring"></div>
-        <span>Aspetta...</span>
+        <span>Cliccami...</span>
     </div>
 </template>
 

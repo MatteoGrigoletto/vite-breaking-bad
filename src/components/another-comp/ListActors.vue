@@ -3,10 +3,11 @@
         <div>
             <p> Found {{listActor.length}} characters</p>
         </div>
-        <div class="container-cards" v-if=" listActor.length < 62">
-            <AppLoader/>
+        <div class="container-cards" v-if="active === false || listActor.length < 62">
+            <AppLoader @click="active = true"/>
         </div>
-        <div class="container-cards" v-else >  
+        <div class="container-cards" v-else>  
+
             <CardActor v-for="actor in listActor"
              :item="actor" />
         </div>
@@ -24,6 +25,7 @@ import AppLoader from './AppLoader.vue';
         data(){{
             return{
                 listActor: [],
+                active: false,
             }
         }},
         components:{

@@ -43,7 +43,7 @@
     .text-box{
         text-align: center;
         color: white;
-        padding: 10px;
+        padding: 10px 0px;
     }
 }
 </style>

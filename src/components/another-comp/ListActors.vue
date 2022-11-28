@@ -3,7 +3,10 @@
         <div>
             <p> Found {{listActor.length}} characters</p>
         </div>
-        <div class="container-cards">
+        <div class="container-cards" v-if=" listActor.length < 62">
+            <AppLoader/>
+        </div>
+        <div class="container-cards" v-else >  
             <CardActor v-for="actor in listActor"
              :item="actor" />
         </div>
@@ -14,6 +17,8 @@
 <script>
 import axios from 'axios';
 import CardActor from './CardActor.vue';
+import AppLoader from './AppLoader.vue';
+
     export default {
         name:'ListActors',
         data(){{
@@ -23,6 +28,7 @@ import CardActor from './CardActor.vue';
         }},
         components:{
             CardActor,
+            AppLoader,
         },
         created(){
             axios.get("https://www.breakingbadapi.com/api/characters").then((response) => {

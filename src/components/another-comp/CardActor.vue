@@ -1,12 +1,12 @@
 <template>
     <div class="card">
-        <div>
-            <img src="" alt="">
+        <div class="img-box">
+            <img :src=" item.img " :alt=" item.category">
         </div>
-        <div>
+        <div class="text-box">
             <h3>{{item.name}}</h3>
-            <p>{{}}</p>
-            <p>Alive</p>
+            <p>{{item.category}}</p>
+            <p>{{item.status}}</p>
         </div>
     </div>
 </template>
@@ -24,6 +24,26 @@
 
 .card{
     width: calc(100% / 5 - 10px);
-    background-color: aqua;
+    background-color: var(--bg_body);
+    height: 400px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 4px solid var(--black);
+    .img-box{
+        height: 300px;
+        border: 1px solid white;
+        
+
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .text-box{
+        text-align: center;
+        color: white;
+        padding: 10px;
+    }
 }
 </style>

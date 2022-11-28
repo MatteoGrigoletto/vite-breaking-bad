@@ -27,6 +27,7 @@ import CardActor from './CardActor.vue';
         created(){
             axios.get("https://www.breakingbadapi.com/api/characters").then((response) => {
                 this.listActor = response.data;
+                console.log(this.listActor)
             });
         }
     }

@@ -22,6 +22,7 @@
     min-width: 100%;
     background-color: black;
     color: white;
+    border-radius: 10px;
 
     .ring{
         position: absolute;

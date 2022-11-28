@@ -47,6 +47,7 @@ import AppLoader from './AppLoader.vue';
     background-color: var(--bg_main);
     padding: 30px;
     margin-top: 20px;
+    border-radius: 10px;
 
     div{
         
@@ -54,6 +55,7 @@ import AppLoader from './AppLoader.vue';
             background-color: var(--black);
             color: white;
             padding: 10px;
+            border-radius: 10px;
         }
     }
     .container-cards{

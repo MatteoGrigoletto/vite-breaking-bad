@@ -1,7 +1,7 @@
 <template>
-  <div>
     <AppHeader/>
-  </div>
+    <AppMain/>
+    <AppFooter/>
 </template>
 
 <script>
@@ -18,8 +18,12 @@ export default {
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
-@import 'style/globalScss.scss'
+@import './style/globalScss.scss';
+
+body{
+  background-color: var(--bg_body);
+}
 
 </style>

@@ -1,10 +1,12 @@
 <template>
-    <section class="first-section-main">
-        <SelectElement/>
-    </section>
-    <section class="second-section-main">
-        <ListActors/>
-    </section>
+    <main>
+        <section class="first-section-main">
+            <SelectElement/>
+        </section>
+        <section class="second-section-main">
+            <ListActors/>
+        </section>
+    </main>
 </template>
 
 <script>

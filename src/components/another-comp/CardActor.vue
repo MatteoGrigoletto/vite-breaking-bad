@@ -30,10 +30,17 @@
     padding: 10px;
     border-radius: 10px;
     border: 4px solid var(--black);
+
+    &:hover{
+        transform: scale(1.1);
+        .img-box{
+            animation: border 2s linear infinite;
+        }
+         
+    }
     .img-box{
         height: 300px;
         border: 1px solid white;
-        
 
         img{
             height: 100%;
@@ -44,6 +51,17 @@
         text-align: center;
         color: white;
         padding: 10px 0px;
+    }
+}
+@keyframes border{
+    0%{
+        box-shadow:  3px 3px 3px 3px #e65c00;
+    }
+    50%{
+        box-shadow:  3px 3px 3px 3px #18b201;
+    }
+    100%{
+        box-shadow:  3px 3px 3px 3px #0456c8;
     }
 }
 </style>

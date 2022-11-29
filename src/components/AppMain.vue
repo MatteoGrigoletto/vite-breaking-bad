@@ -27,7 +27,6 @@ import ListActors from './another-comp/ListActors.vue';
     },
     methods:{
         filtering(){
-           
             axios.get("https://www.breakingbadapi.com/api/characters",
         {
             params: {
@@ -37,11 +36,12 @@ import ListActors from './another-comp/ListActors.vue';
         .then((response) => {
                 this.store.listActor = response.data;
             });
-        }
+        },
+        
     },
     created(){
       this.filtering();
-        }
+        },
 }
     
 </script>

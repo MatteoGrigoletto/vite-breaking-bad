@@ -1,6 +1,6 @@
 <template>
     <div class="container-70">
-        <div class="counter">
+        <div class="counter" v-if=" active === true">
             <p> Found {{totalActors}} characters</p>
             <p> Characters dead: {{actorStatus}}</p>
         </div>

@@ -1,14 +1,14 @@
 <template>
     <div class="container-70">
         <div>
-            <p> Found {{listActor.length}} characters</p>
+            <p> Found {{store.listActor.length}} characters</p>
         </div>
-        <div class="container-cards" v-if="active === false || listActor.length < 62">
+        <div class="container-cards" v-if="active === false">
             <AppLoader @click="active = true"/>
         </div>
         <div class="container-cards" v-else>  
 
-            <CardActor v-for="actor in listActor"
+            <CardActor v-for="actor in store.listActor"
              :item="actor" />
         </div>
     </div>
@@ -16,7 +16,8 @@
 </template>
 
 <script>
-import axios from 'axios';
+import { store } from '../../store';
+
 import CardActor from './CardActor.vue';
 import AppLoader from './AppLoader.vue';
 
@@ -24,7 +25,7 @@ import AppLoader from './AppLoader.vue';
         name:'ListActors',
         data(){{
             return{
-                listActor: [],
+                store,
                 active: false,
             }
         }},
@@ -32,12 +33,6 @@ import AppLoader from './AppLoader.vue';
             CardActor,
             AppLoader,
         },
-        created(){
-            axios.get("https://www.breakingbadapi.com/api/characters").then((response) => {
-                this.listActor = response.data;
-                console.log(this.listActor)
-            });
-        }
     }
 </script>
 

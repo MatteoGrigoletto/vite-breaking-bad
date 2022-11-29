@@ -1,20 +1,25 @@
 <template>
     <div class="container-70">
-        <form>
+        <form @change="$emit('filter')">
             <label for="category"></label>
-            <select name="category" id="category">
-                <option value="#">Select category</option>
-                <option value="#">#</option>
-                <option value="#">#</option>
-                <option value="#">#</option>
+            <select name="category" id="category" v-model="store.selectFilter">
+                <option value="">Select category</option>
+                <option value="Better Call Saul">Better Call Sauk</option>
+                <option value="Breaking Bad">Breaking Bad</option>
             </select>
         </form>
     </div>
 </template>
 
 <script>
+import {store} from '../../store';
     export default {
         name: 'SelectElement',
+        data(){
+            return {
+                store,
+            }
+        }
     }
 </script>
 
